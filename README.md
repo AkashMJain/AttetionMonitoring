@@ -42,6 +42,6 @@ dlib
 ```
 git clone git@github.com:AkashMJain/AttetionMonitoring.git
 cd AttetionMonitoring
-python 
+python data_extraction.py -p sh
 ```
 
