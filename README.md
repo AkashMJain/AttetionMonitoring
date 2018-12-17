@@ -40,8 +40,8 @@ dlib
 ## Install
 
 ```
-git clone git@github.com:BUPTLdy/human-detector.git
-cd human-detector/object_detector
-python python detector.py
+git clone git@github.com:AkashMJain/AttetionMonitoring.git
+cd AttetionMonitoring
+python 
 ```
 
