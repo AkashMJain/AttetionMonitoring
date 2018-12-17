@@ -22,8 +22,8 @@ dlib
   ```
   step 1
   
-    download file               
-    https://files.pythonhosted.org/packages/35/8d/e4ddf60452e2fb1ce3164f774e68968b3f110f1cb4cd353235d56875799e/dlib-  19.16.0.tar.gz  
+    download file    
+      https://pypi.org/project/dlib/#files
     
   step 2  
   
