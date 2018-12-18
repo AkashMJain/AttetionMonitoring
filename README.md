@@ -31,6 +31,7 @@ dlib
     $ tar -xvf 'filename.tar.gz'
     
   step 3
+
     cd to dlib extracted folder and run following command.
     $ python setup.py install
     
