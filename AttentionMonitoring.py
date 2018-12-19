@@ -34,13 +34,16 @@ ap.add_argument("-p", "--prototext", required=True, help="path to .deploy file")
 ap.add_argument("-m", "--model", required="True", help="path to .caffe file")
 ap.add_argument("-c", "--conf", default=0.5, type=float, help="threshold value")
 
+# camera ID for local webcam ID is 0 for other cam try numbers 1,2.. onwards
+ap.add_argument("-v", "--camera", default=0, type=int, help="Camera ID")
+
 args = vars(ap.parse_args())
 
 # load model from .caffe file available in same dir
 
 net = cv2.dnn.readNetFromCaffe(args["prototext"], args["model"])
 
-vs = VideoStream(src=0).start()
+vs = VideoStream(src=args["camera"]).start()
 
 while True:
 
