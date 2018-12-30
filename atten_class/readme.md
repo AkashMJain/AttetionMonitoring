@@ -1,4 +1,4 @@
-# SVM and HOG part of the code (Understaning)
+# DLIB requirements
 
 ## DLIB
 if we are looking at the problem of computer vision or something related to it you should heard of this library. according to it's git-hub page DLIB is toolkit for making real world machine learning and data analysis applications in c++(though it is also can be used in python).DLIB is written in C++.
