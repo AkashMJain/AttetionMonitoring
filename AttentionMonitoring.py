@@ -8,20 +8,20 @@ import cv2
 import atten_class.attention_calc as tp
 
 # c = tp.attention()
-c = tp.attention()
-c.init()
+obj = tp.facial_point_operation()
+obj.init()
 
 
 def atten(frame):
-    val = c.calc_data(frame)
-    if val == 1:
+    str = obj.loop_operation(frame)
+    if str == 1:
+        return "non_attentive_eyes_closed"
+    elif str == 2:
+        return "non_attentive_open_mouth"
+    elif str == 0:
         return "attentive"
-    elif val == 2:
-        return "non-attentive"
     else:
-        return "ERROR_NOT_DETECTING"
-
-    # return "str"
+        return "not_dected"
 
 
 ap = argparse.ArgumentParser()
@@ -67,9 +67,10 @@ while True:
 
         (sX, sY, eX, eY) = box.astype("int")
 
-        text = "{:.2f}%".format(conf * 100) + atten(window)
-
         y = sY - 10 if sY - 10 > 10 else sY + 10
+        frame = window[sY - 10:eY + 10, sX - 10:eX + 10]
+        # cv2.imshow("frame", frame)
+        text = "{:.2f}%".format(conf * 100) + atten(frame)
 
         cv2.rectangle(window, (sX, sY), (eX, eY), (0, 255, 0), 2)
 
